@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="siteApp">
+<html lang="en" data-ng-app="siteApp">
   <head>
     <title>HSLU WebTec Testat Site</title>
 
@@ -15,26 +15,26 @@
   <body>
 	<div class="container">
       <div class="header clearfix">
-        <nav ng-controller="NavigationController as navigation">
+        <nav data-ng-controller="NavigationController as navigation">
           <ul class="nav nav-pills float-xs-right">
             <li class="nav-item">
-              <a class="nav-link" ng-class="{active: navigation.isActive('/')}" href="#/">Home</a>
+              <a class="nav-link" data-ng-class="{active: navigation.isActive('/')}" href="#/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" ng-class="{active: navigation.isActive('/canvas')}" href="#/canvas">Canvas</a>
+              <a class="nav-link" data-ng-class="{active: navigation.isActive('/canvas')}" href="#/canvas">Canvas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" ng-class="{active: navigation.isActive('/form')}" href="#/form">Formular</a>
+              <a class="nav-link" data-ng-class="{active: navigation.isActive('/form')}" href="#/form">Formular</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" ng-class="{active: navigation.isActive('/images')}" href="#/images">Texte und Bilder</a>
+              <a class="nav-link" data-ng-class="{active: navigation.isActive('/images')}" href="#/images">Texte und Bilder</a>
             </li>
           </ul>
         </nav>
         <h3 class="text-muted">HSLU WebTec</h3>
       </div>
 
-      <div ng-view></div>
+      <div data-ng-view></div>
 
       <footer class="footer">
         <p>&copy; Published under MIT. A <a href="https://tuxtimo.me" target="_blank">Timo Furrer</a> Project.</p>
