@@ -5,7 +5,8 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "angular-ui-router": "^0.3.2"
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^4.0.0-alpha.5"
   },
   "devDependencies": {},
   "repository": {
