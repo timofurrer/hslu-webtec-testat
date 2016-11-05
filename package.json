@@ -1,0 +1,21 @@
+{
+  "name": "hslu-webtec-testat",
+  "version": "1.0.0",
+  "description": "HSLU WebTec Testat Website",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timofurrer/hslu-webtec-testat.git"
+  },
+  "author": "Timo Furrer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timofurrer/hslu-webtec-testat/issues"
+  },
+  "homepage": "https://github.com/timofurrer/hslu-webtec-testat#readme"
+}
