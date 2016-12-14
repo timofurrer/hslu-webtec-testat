@@ -53,6 +53,7 @@
 
         self.mouseupEventHandler = function(evt) {
             self.isDrawing = false;
+            localStorage.setItem(self.name + '_weird', self.canvas.toDataURL());
         };
 
         self.store = function() {

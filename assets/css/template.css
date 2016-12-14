@@ -86,3 +86,7 @@ canvas {
 .contact-form-heading {
     margin-bottom: 2rem;
 }
+
+.weird-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
