@@ -3,12 +3,13 @@
     var WeirdImage = function($log) {
         var self = this;
 
-        self.name = 'HodorCanvas_weird';
+        self.weird_name = 'HodorCanvas_weird';
 
         self.load_weird = function(img) {
-            var dataURL = localStorage.getItem(self.name);
+            var dataURL = localStorage.getItem(self.weird_name);
             if(dataURL === null || img === undefined) {
                 $log.info('No weird image found to load');
+                img.src = 'assets/images/default_canvas.png';
                 return;
             }
 

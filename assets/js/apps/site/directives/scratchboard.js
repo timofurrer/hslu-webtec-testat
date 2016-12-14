@@ -53,6 +53,7 @@
 
         self.mouseupEventHandler = function(evt) {
             self.isDrawing = false;
+            $log.info('Store weird version');
             localStorage.setItem(self.name + '_weird', self.canvas.toDataURL());
         };
 
@@ -78,6 +79,12 @@
             self.context.clearRect(0, 0, 800, 500);
         };
 
+        self.remove = function() {
+            self.clear();
+            localStorage.removeItem(self.name);
+            localStorage.removeItem(self.name + '_weird');
+        }
+
         return {
             restrict: 'A',
             link: function(scope, element) {
@@ -98,6 +105,10 @@
                 var clearButton = $compile('<button type="button" class="btn btn-warning btn-lg button-margin">Clear</button>')(scope);
                 clearButton.bind('click', self.clear);
                 element.parent().append(clearButton);
+
+                var deleteButton = $compile('<button type="button" class="btn btn-danger btn-lg button-margin">Delete</button>')(scope);
+                deleteButton.bind('click', self.remove);
+                element.parent().append(deleteButton);
             }
         }
     };
