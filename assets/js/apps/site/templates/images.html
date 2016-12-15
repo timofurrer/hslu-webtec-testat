@@ -1,4 +1,4 @@
-<div class="row contents">
+<div class="row contents" data-ng-controller="QuoteController as quote">
     <h2>Image and Text</h2>
 
     <p>The internet is so weird - weird people produced weird pictures. The very weirdest one I could find was this one:</p>
@@ -7,5 +7,13 @@
 
     <div class="alert alert-info" role="alert">
         <strong>Tip:</strong> Go to <a href="#/canvas">Canvas</a> to draw an aweful picture yourself!
+    </div>
+
+    <div>
+        <h3>Oh, I've loaded some a nice quote ...</h3>
+        <blockquote class="blockquote">
+          <p>{{ quote.text }}</p>
+          <footer class="blockquote-footer"><cite title="Foo">Star Wars</cite></footer>
+        </blockquote>
     </div>
 </div>
