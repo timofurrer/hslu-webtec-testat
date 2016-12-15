@@ -14,6 +14,10 @@
             self.currentStyle = style;
             $cookies.put('style', self.currentStyle);
         };
+
+        self.getClass = function(style) {
+            return (style == self.currentStyle) ? 'btn-success' : 'btn-primary';
+        }
     };
 
     module.controller('StyleController', StyleController);

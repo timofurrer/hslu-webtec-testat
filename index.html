@@ -31,15 +31,14 @@
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted">HSLU WebTec</h3>
+        <h3 class="text-muted" style="display: inline-block; margin-right: 1rem;">HSLU WebTec</h3>
+        <button ng-click="style.choose(0)" class="btn btn-sm" data-ng-class="style.getClass(0)">Style 1</button> | <button ng-click="style.choose(1)" class="btn btn-sm" data-ng-class="style.getClass(1)">Style 2</button>
       </div>
 
       <div data-ng-view></div>
 
       <footer class="footer">
-        <p>&copy; Published under MIT. A <a href="https://tuxtimo.me" target="_blank">Timo Furrer</a> Project.
-        | <a ng-click="style.choose(0)">Style 1</a> | <a ng-click="style.choose(1)">Style 2</a>
-        </p>
+          <p>&copy; Published under MIT. A <a href="https://tuxtimo.me" target="_blank">Timo Furrer</a> Project.</p>
       </footer>
 
     </div>
