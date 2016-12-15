@@ -9,13 +9,33 @@
         self.context = null;
         self.isDrawing = false;
 
+        self.colors = [
+            '#FF0000',
+            '#FF00FF',
+            '#0000FF',
+            '#00FFFF',
+            '#00FF00',
+            '#FFFF00'
+        ];
+
+        self.currentColor = 0;
+
         self.previousCoordinates = {};
 
         self.draw = function(from, to) {
+            self.context.beginPath();
             self.context.moveTo(from.x, from.y);
             self.context.lineTo(to.x, to.y);
-            self.context.strokeStyle = '#333333';
+            $log.info('Draw in ' + self.colors[self.currentColor]);
+            self.context.strokeStyle = self.colors[self.currentColor];
             self.context.stroke();
+
+            // increase color
+            self.currentColor++;
+
+            if(self.currentColor >= self.colors.length) {
+                self.currentColor = 0;
+            }
         }
 
         self.getCoordinates = function(evt) {
@@ -36,7 +56,6 @@
         self.mousedownEventHandler = function(evt) {
             self.previousCoordinates = self.getCoordinates(evt);
 
-            self.context.beginPath();
             self.isDrawing = true;
         };
 
