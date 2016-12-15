@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="siteApp">
+<html lang="en" data-ng-app="siteApp" data-ng-controller="StyleController as style">
   <head>
     <title>HSLU WebTec Testat Site</title>
 
@@ -10,7 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/template.css">
+    <link rel="stylesheet" data-ng-href="{{ style.styles[style.currentStyle] }}">
   </head>
   <body>
 	<div class="container">
@@ -37,16 +37,20 @@
       <div data-ng-view></div>
 
       <footer class="footer">
-        <p>&copy; Published under MIT. A <a href="https://tuxtimo.me" target="_blank">Timo Furrer</a> Project.</p>
+        <p>&copy; Published under MIT. A <a href="https://tuxtimo.me" target="_blank">Timo Furrer</a> Project.
+        | <a ng-click="style.choose(0)">Style 1</a> | <a ng-click="style.choose(1)">Style 2</a>
+        </p>
       </footer>
 
     </div>
 
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
     <script src="assets/js/apps/site/module.js"></script>
     <script src="assets/js/apps/site/config.js"></script>
     <script src="assets/js/apps/site/controllers/NavigationController.js"></script>
+    <script src="assets/js/apps/site/controllers/StyleController.js"></script>
     <script src="assets/js/apps/site/controllers/FormController.js"></script>
     <script src="assets/js/apps/site/directives/scratchboard.js"></script>
     <script src="assets/js/apps/site/directives/weirdimage.js"></script>

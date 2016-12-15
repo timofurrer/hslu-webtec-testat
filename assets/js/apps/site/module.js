@@ -4,6 +4,6 @@
 
 (function() {
     angular.module('siteApp', [
-        'ngRoute'
+        'ngRoute', 'ngCookies'
     ]);
 })();

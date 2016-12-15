@@ -1,0 +1,98 @@
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: lightgreen;
+}
+
+.header,
+.contents,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+  color: blue;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3rem;
+}
+
+
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+@media (min-width: 70em) {
+  .container {
+    max-width: 70rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid #e5e5e5;
+  color: red;
+  background-color: yellow;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.contents {
+  margin: 3rem 0;
+}
+.contents p + h4 {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 70em) {
+  .header,
+  .contents,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+canvas {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-margin {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form-heading {
+    margin-bottom: 2rem;
+}
+
+.weird-image {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
